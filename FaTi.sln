@@ -3,7 +3,9 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 15
 VisualStudioVersion = 15.0.27703.2000
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FaTi", "FaTi\FaTi.csproj", "{B0E5F513-7ABA-4B5B-A7D8-D307BB09902E}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "FaTi", "FaTi\FaTi.csproj", "{B0E5F513-7ABA-4B5B-A7D8-D307BB09902E}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BVirtual.FaTi.Contracts", "BVirtual.FaTi.Contracts\BVirtual.FaTi.Contracts.csproj", "{58061508-EA32-4C11-92E3-7AB16C065F21}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -15,6 +17,10 @@ Global
 		{B0E5F513-7ABA-4B5B-A7D8-D307BB09902E}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{B0E5F513-7ABA-4B5B-A7D8-D307BB09902E}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{B0E5F513-7ABA-4B5B-A7D8-D307BB09902E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{58061508-EA32-4C11-92E3-7AB16C065F21}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{58061508-EA32-4C11-92E3-7AB16C065F21}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{58061508-EA32-4C11-92E3-7AB16C065F21}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{58061508-EA32-4C11-92E3-7AB16C065F21}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
