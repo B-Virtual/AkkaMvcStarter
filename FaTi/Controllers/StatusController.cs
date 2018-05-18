@@ -12,7 +12,6 @@ namespace BVirtual.FaTi.Controllers
         {
             try
             {
-
                 var result = new
                 {
                     Result = "SUCCESS",
@@ -31,6 +30,5 @@ namespace BVirtual.FaTi.Controllers
                 return new JsonResult(result);
             }
         }
-
     }
 }

@@ -49,6 +49,7 @@ namespace BVirtual.FaTi
             catch (Exception e)
             {
                 Log.Fatal(e, "Host terminated unexpectedly.");
+                Console.ReadKey();
                 return 1;
             }
             finally

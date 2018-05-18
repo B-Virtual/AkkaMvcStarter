@@ -8,6 +8,7 @@ using Microsoft.AspNetCore.Hosting;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Logging;
 using Newtonsoft.Json;
+using Swashbuckle.AspNetCore.Swagger;
 
 namespace BVirtual.FaTi
 {
@@ -23,6 +24,7 @@ namespace BVirtual.FaTi
         public void ConfigureServices(IServiceCollection services)
         {
             services.AddMvcCore()
+                    .AddApiExplorer()
                     .AddJsonFormatters(delegate (JsonSerializerSettings settings) {
                         settings.DateFormatHandling = DateFormatHandling.IsoDateFormat;
                         settings.Error = (sender, args) =>
@@ -48,11 +50,18 @@ namespace BVirtual.FaTi
             //services.AddSingleton<IESClient, ESClient>(_ => new ESClient(_.GetRequiredService<ILogger<ESClient>>(), _.GetRequiredService<AppConfig>()));
 
             services.AddFareServices();
+            services.AddSwaggerGen(c => c.SwaggerDoc("v1", new Info {Title = "Quote Validator V1", Version = "v1"}));
         }
 
         public void Configure(IApplicationBuilder app)
         {
+            app.UseStaticFiles();
             app.UseMvc();
+            app.UseSwagger();
+            app.UseSwaggerUI(c =>
+            {
+                c.SwaggerEndpoint("/swagger/v1/swagger.json", "Fare and Ticketing - FATI V1");
+            });
 
             //// Get the ProductManagerActorProvider to pre-heat the products from TariffManagement
             //var pmaProvider = (ProductManagerActorProvider)app.ApplicationServices.GetService(typeof(ProductManagerActorProvider));
